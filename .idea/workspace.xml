@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d55c61dd-af06-4086-834b-fe693c136382" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1873123361">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.74" value="1" />
+          <entry key="project.open.time.77" value="1" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.opened" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="JAVA/FindRoute" value="1" />
+          <entry key="JAVA/LineSegment" value="1" />
+          <entry key="JAVA/MultiGraphADT" value="1" />
+          <entry key="JAVA/SubwayMap" value="1" />
+          <entry key="java" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="7" />
+          <entry key="UML" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="5137" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="5137" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.spring.boot.run.usages" />
+      <usages-collector id="statistics.spring.boot.mvc.usages" />
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.vcs.git.usages" />
+    </session>
+    <session id="250080436">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.75" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.spring.boot.run.usages" />
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Scratch" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.spring.boot.mvc.usages" />
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="snippet" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.file.extensions.edit" />
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.delete.remote" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit" />
+    </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="SubwaySystem_TestCopy" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MultiGraphADT.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/SubwayMap.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="87" column="25" selection-start-line="87" selection-start-column="25" selection-end-line="87" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MultiGraph.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1207">
+              <caret line="77" column="23" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Node.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Edge.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="23" selection-start-column="23" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/MultiGraphADT.java" />
+        <option value="$PROJECT_DIR$/src/LineSegment.java" />
+        <option value="$PROJECT_DIR$/src/Edge.java" />
+        <option value="$PROJECT_DIR$/src/Node.java" />
+        <option value="$PROJECT_DIR$/src/Station.java" />
+        <option value="$PROJECT_DIR$/src/FindRoute.java" />
+        <option value="$PROJECT_DIR$/src/MultiGraphADT.java" />
+        <option value="$PROJECT_DIR$/src/MultiGraph.java" />
+        <option value="$PROJECT_DIR$/src/SubwayMap.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="1346" />
+    <option name="height" value="684" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="SubwaySystem_TestCopy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SubwaySystem_TestCopy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SubwaySystem_TestCopy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SubwaySystem_TestCopy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537751571128" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Митко\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d55c61dd-af06-4086-834b-fe693c136382" name="Default Changelist" comment="" />
+      <created>1537636918403</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1537636918403</updated>
+      <workItem from="1537636929205" duration="802000" />
+      <workItem from="1537637773536" duration="8789000" />
+      <workItem from="1537720227238" duration="9483000" />
+      <workItem from="1537748626289" duration="630000" />
+      <workItem from="1537750548579" duration="558000" />
+      <workItem from="1537751136715" duration="259000" />
+      <workItem from="1537751692451" duration="5021000" />
+      <workItem from="1537825804793" duration="1888000" />
+      <workItem from="1537838097707" duration="1518000" />
+      <workItem from="1537839649439" duration="1473000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="30421000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="740" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49917626" visible="true" weight="0.27760968" />
+      <window_info id="Structure" order="1" sideWeight="0.50082374" side_tool="true" weight="0.2655068" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.50082374" side_tool="true" weight="0.2655068" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3294893" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4977307" visible="true" weight="0.3294893" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50226927" side_tool="true" weight="0.3294893" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.32980332" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/MultiGraphADT.java" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.929/DiGraphADT.java" />
+    <entry file="file://$PROJECT_DIR$/src/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/LineSegment">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>LineSegment</OriginalElement>
+          <nodes>
+            <node x="" y="">Station</node>
+            <node x="" y="">MultiGraphADT</node>
+            <node x="" y="">SubwayMap</node>
+            <node x="" y="">Node</node>
+            <node x="" y="">FindRoute</node>
+            <node x="" y="">Edge</node>
+            <node x="" y="">MultiGraph</node>
+            <node x="" y="">LineSegment</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.2000000000000002" x="580.0" y="189.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FindRoute.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="46" lean-forward="true" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Station.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#239#240#0" expanded="true" />
+            <element signature="e#263#264#0" expanded="true" />
+            <element signature="e#308#309#0" expanded="true" />
+            <element signature="e#335#336#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LineSegment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/FindRoute">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>FindRoute</OriginalElement>
+          <nodes>
+            <node x="507.3017113095239" y="475.0">Station</node>
+            <node x="597.8017113095239" y="143.0">MultiGraphADT</node>
+            <node x="473.6557291666667" y="730.0">SubwayMap</node>
+            <node x="109.19337797619062" y="0.0">Node</node>
+            <node x="0.0" y="829.0">FindRoute</node>
+            <node x="986.1557291666668" y="0.0">Edge</node>
+            <node x="39.02671130952393" y="398.0">MultiGraph</node>
+            <node x="976.6557291666668" y="145.0">LineSegment</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="SubwayMap" target="Station">
+              <point x="-57.25" y="-158.0" />
+              <point x="645.4057291666667" y="710.0" />
+              <point x="640.6350446428572" y="710.0" />
+              <point x="53.333333333333314" y="59.0" />
+            </edge>
+            <edge source="SubwayMap" target="Node">
+              <point x="171.75" y="-158.0" />
+              <point x="874.4057291666667" y="710.0" />
+              <point x="876.3017113095239" y="710.0" />
+              <point x="876.3017113095239" y="93.0" />
+              <point x="257.7648065476192" y="93.0" />
+              <point x="68.57142857142856" y="36.5" />
+            </edge>
+            <edge source="MultiGraph" target="MultiGraphADT">
+              <point x="144.66666666666663" y="-136.0" />
+              <point x="400.69337797619056" y="373.0" />
+              <point x="664.8017113095239" y="373.0" />
+              <point x="-67.0" y="102.5" />
+            </edge>
+            <edge source="FindRoute" target="MultiGraph">
+              <point x="70.20000000000005" y="-59.0" />
+              <point x="245.70000000000005" y="690.0" />
+              <point x="364.52671130952393" y="690.0" />
+              <point x="108.5" y="136.0" />
+            </edge>
+            <edge source="MultiGraphADT" target="Node">
+              <point x="0.0" y="-102.5" />
+              <point x="731.8017113095239" y="103.0" />
+              <point x="234.90766369047628" y="103.0" />
+              <point x="45.714285714285666" y="36.5" />
+            </edge>
+            <edge source="SubwayMap" target="MultiGraphADT">
+              <point x="57.25" y="-158.0" />
+              <point x="759.9057291666667" y="710.0" />
+              <point x="798.8017113095239" y="710.0" />
+              <point x="67.0" y="102.5" />
+            </edge>
+            <edge source="MultiGraph" target="Node">
+              <point x="-144.66666666666663" y="-136.0" />
+              <point x="111.3600446428573" y="373.0" />
+              <point x="171.07529761904772" y="373.0" />
+              <point x="171.07529761904772" y="123.0" />
+              <point x="166.33623511904773" y="123.0" />
+              <point x="-22.85714285714289" y="36.5" />
+            </edge>
+            <edge source="Station" target="Node">
+              <point x="0.0" y="-59.0" />
+              <point x="587.3017113095239" y="113.0" />
+              <point x="212.0505208333334" y="113.0" />
+              <point x="22.857142857142776" y="36.5" />
+            </edge>
+            <edge source="LineSegment" target="Edge">
+              <point x="0.0" y="-81.0" />
+              <point x="0.0" y="47.5" />
+            </edge>
+            <edge source="FindRoute" target="Node">
+              <point x="-140.39999999999998" y="-59.0" />
+              <point x="35.10000000000002" y="710.0" />
+              <point x="17.526711309523876" y="710.0" />
+              <point x="17.526711309523876" y="113.0" />
+              <point x="120.62194940476206" y="113.0" />
+              <point x="-68.57142857142856" y="36.5" />
+            </edge>
+            <edge source="FindRoute" target="Station">
+              <point x="140.39999999999998" y="-59.0" />
+              <point x="315.9" y="700.0" />
+              <point x="533.9683779761906" y="700.0" />
+              <point x="-53.333333333333314" y="59.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.5000000000000001" x="589.0" y="515.0" />
+          <SelectedNodes>
+            <node>MultiGraphADT</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/SubwayMap">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>SubwayMap</OriginalElement>
+          <nodes>
+            <node x="" y="">Station</node>
+            <node x="" y="">MultiGraphADT</node>
+            <node x="" y="">SubwayMap</node>
+            <node x="" y="">Node</node>
+            <node x="" y="">FindRoute</node>
+            <node x="" y="">Edge</node>
+            <node x="" y="">LineSegment</node>
+            <node x="" y="">MultiGraph</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="670.0" y="258.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/MultiGraphADT">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>MultiGraphADT</OriginalElement>
+          <nodes>
+            <node x="500.64074074074085" y="475.0">Station</node>
+            <node x="591.1407407407409" y="143.0">MultiGraphADT</node>
+            <node x="476.713888888889" y="730.0">SubwayMap</node>
+            <node x="275.3074074074075" y="0.0">Node</node>
+            <node x="0.0" y="829.0">FindRoute</node>
+            <node x="989.213888888889" y="0.0">Edge</node>
+            <node x="979.713888888889" y="145.0">LineSegment</node>
+            <node x="34.12870370370376" y="398.0">MultiGraph</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="SubwayMap" target="Station">
+              <point x="-190.83333333333331" y="-158.0" />
+              <point x="514.8805555555557" y="710.0" />
+              <point x="560.6407407407409" y="710.0" />
+              <point x="-20.0" y="59.0" />
+            </edge>
+            <edge source="SubwayMap" target="Node">
+              <point x="190.83333333333331" y="-158.0" />
+              <point x="896.5472222222223" y="710.0" />
+              <point x="880.6407407407409" y="710.0" />
+              <point x="880.6407407407409" y="93.0" />
+              <point x="425.3074074074075" y="93.0" />
+              <point x="70.0" y="36.5" />
+            </edge>
+            <edge source="MultiGraph" target="MultiGraphADT">
+              <point x="144.66666666666663" y="-136.0" />
+              <point x="395.7953703703704" y="373.0" />
+              <point x="658.1407407407409" y="373.0" />
+              <point x="-67.0" y="102.5" />
+            </edge>
+            <edge source="FindRoute" target="MultiGraph">
+              <point x="70.20000000000005" y="-59.0" />
+              <point x="245.70000000000005" y="690.0" />
+              <point x="359.62870370370376" y="690.0" />
+              <point x="108.5" y="136.0" />
+            </edge>
+            <edge source="MultiGraphADT" target="Node">
+              <point x="0.0" y="-102.5" />
+              <point x="725.1407407407409" y="113.0" />
+              <point x="385.3074074074075" y="113.0" />
+              <point x="30.0" y="36.5" />
+            </edge>
+            <edge source="SubwayMap" target="MultiGraphADT">
+              <point x="38.16666666666663" y="-158.0" />
+              <point x="743.8805555555557" y="710.0" />
+              <point x="792.1407407407409" y="710.0" />
+              <point x="67.0" y="102.5" />
+            </edge>
+            <edge source="MultiGraph" target="Node">
+              <point x="0.0" y="-136.0" />
+              <point x="251.12870370370376" y="373.0" />
+              <point x="219.48796296296308" y="373.0" />
+              <point x="219.48796296296308" y="123.0" />
+              <point x="345.3074074074075" y="123.0" />
+              <point x="-10.0" y="36.5" />
+            </edge>
+            <edge source="LineSegment" target="Edge">
+              <point x="0.0" y="-81.0" />
+              <point x="0.0" y="47.5" />
+            </edge>
+            <edge source="Station" target="Node">
+              <point x="0.0" y="-59.0" />
+              <point x="580.6407407407409" y="123.0" />
+              <point x="365.3074074074075" y="123.0" />
+              <point x="10.0" y="36.5" />
+            </edge>
+            <edge source="FindRoute" target="Node">
+              <point x="-140.39999999999998" y="-59.0" />
+              <point x="35.10000000000002" y="710.0" />
+              <point x="12.628703703703763" y="710.0" />
+              <point x="12.628703703703763" y="93.0" />
+              <point x="285.3074074074075" y="93.0" />
+              <point x="-70.0" y="36.5" />
+            </edge>
+            <edge source="FindRoute" target="Station">
+              <point x="140.39999999999998" y="-59.0" />
+              <point x="315.9" y="700.0" />
+              <point x="520.6407407407409" y="700.0" />
+              <point x="-60.0" y="59.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.8" x="283.0" y="169.0" />
+          <SelectedNodes>
+            <node>MultiGraphADT</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/jshell/jshell_console.snippet">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MultiGraphADT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MultiGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="77" column="23" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Edge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SubwayMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="87" column="25" selection-start-line="87" selection-start-column="25" selection-end-line="87" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>SubwaySystem_Test</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
