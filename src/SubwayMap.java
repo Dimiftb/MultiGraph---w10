@@ -13,6 +13,7 @@ public class SubwayMap implements MultiGraphADT {
         stationList = new ArrayList<Station>();
         lines = new HashMap<Station, Station>();
         AdjacencyStationsList = new ArrayList<HashMap<Station, ArrayList<Station>>>();
+
         for(int i = 0; i < AdjacencyStationsList.size(); i++) {
             AdjacencyStationsList.add(new HashMap<>());
         }
@@ -30,26 +31,32 @@ public class SubwayMap implements MultiGraphADT {
 
     @Override
     public boolean addEdge(Node node1, Node node2) {
-        Station station1 = new Station(node1.getId(), node2.getName());
-        Station station2 = new Station(node1.getId(), node2.getName());
+
+        Station station1 = new Station(node1.getId(), node1.getName());
+        Station station2 = new Station(node2.getId(), node2.getName());
+
+
         if(isEdge(node1, node2)){
             return false;
         }
         else {
             lines.put(station1, station2);
+
         }
         return true;
     }
 
     @Override
     public boolean isEdge(Node node1, Node node2) {
-        Station station1 = new Station(node1.getId(), node2.getName());
-        Station station2 = new Station(node1.getId(), node2.getName());
+
+        Station station1 = new Station(node1.getId(), node1.getName());
+        Station station2 = new Station(node2.getId(), node2.getName());
+
         if(lines.containsKey(station1)){
-            if(lines.get(station1).equals(station2)) {
-                return true;
-            }
+
+            return lines.get(station1).getId() == station2.getId();
         }
+
         return false;
     }
 
