@@ -3,90 +3,37 @@
   <ID>JAVA</ID>
   <OriginalElement>SubwayMap</OriginalElement>
   <nodes>
-    <node x="234.65089285714282" y="475.0">Station</node>
-    <node x="36.15089285714282" y="143.0">MultiGraphADT</node>
-    <node x="0.0" y="730.0">SubwayMap</node>
-    <node x="638.4842261904762" y="0.0">Node</node>
-    <node x="552.95" y="829.0">FindRoute</node>
-    <node x="958.45" y="0.0">Edge</node>
-    <node x="948.95" y="145.0">LineSegment</node>
-    <node x="434.6508928571428" y="398.0">MultiGraph</node>
+    <node x="0.0" y="786.0">Station</node>
+    <node x="325.0" y="0.0">MultiGraphADT</node>
+    <node x="0.0" y="278.0">SubwayMap</node>
+    <node x="0.0" y="662.0">Node</node>
+    <node x="221.0" y="662.0">FindRoute</node>
+    <node x="662.0" y="662.0">Edge</node>
+    <node x="542.0" y="311.0">MultiGraph</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="SubwayMap" target="Station">
-      <point x="183.2" y="-158.0" />
-      <point x="412.2" y="710.0" />
-      <point x="334.6508928571428" y="710.0" />
-      <point x="20.0" y="59.0" />
-    </edge>
-    <edge source="SubwayMap" target="Node">
-      <point x="-183.20000000000005" y="-158.0" />
-      <point x="45.799999999999955" y="710.0" />
-      <point x="25.65089285714282" y="710.0" />
-      <point x="25.65089285714282" y="93.0" />
-      <point x="649.9127976190475" y="93.0" />
-      <point x="-68.57142857142856" y="36.5" />
-    </edge>
     <edge source="MultiGraph" target="MultiGraphADT">
-      <point x="-144.66666666666663" y="-136.0" />
-      <point x="506.9842261904762" y="373.0" />
-      <point x="237.15089285714282" y="373.0" />
-      <point x="67.0" y="102.5" />
-    </edge>
-    <edge source="FindRoute" target="MultiGraph">
-      <point x="-70.19999999999993" y="-59.0" />
-      <point x="658.25" y="690.0" />
-      <point x="543.1508928571428" y="690.0" />
-      <point x="-108.5" y="136.0" />
-    </edge>
-    <edge source="SubwayMap" target="MultiGraphADT">
-      <point x="-91.60000000000002" y="-158.0" />
-      <point x="137.39999999999998" y="710.0" />
-      <point x="103.15089285714282" y="710.0" />
-      <point x="-67.0" y="102.5" />
-    </edge>
-    <edge source="MultiGraphADT" target="Node">
-      <point x="0.0" y="-102.5" />
-      <point x="170.15089285714282" y="103.0" />
-      <point x="672.7699404761904" y="103.0" />
-      <point x="-45.71428571428578" y="36.5" />
-    </edge>
-    <edge source="MultiGraph" target="Node">
-      <point x="0.0" y="-136.0" />
-      <point x="651.6508928571428" y="373.0" />
-      <point x="677.4267857142856" y="373.0" />
-      <point x="677.4267857142856" y="123.0" />
-      <point x="718.4842261904762" y="123.0" />
-      <point x="0.0" y="36.5" />
+      <point x="0.0" y="-136.5" />
+      <point x="695.0" y="253.0" />
+      <point x="554.5" y="253.0" />
+      <point x="76.5" y="114.0" />
     </edge>
     <edge source="Station" target="Node">
-      <point x="0.0" y="-59.0" />
-      <point x="314.6508928571428" y="113.0" />
-      <point x="695.6270833333333" y="113.0" />
-      <point x="-22.85714285714289" y="36.5" />
+      <point x="0.0" y="-59.5" />
+      <point x="0.0" y="37.0" />
     </edge>
-    <edge source="LineSegment" target="Edge">
-      <point x="0.0" y="-81.0" />
-      <point x="0.0" y="47.5" />
-    </edge>
-    <edge source="FindRoute" target="Node">
-      <point x="140.39999999999998" y="-59.0" />
-      <point x="868.8499999999999" y="710.0" />
-      <point x="890.1508928571428" y="710.0" />
-      <point x="890.1508928571428" y="113.0" />
-      <point x="787.0556547619046" y="113.0" />
-      <point x="68.57142857142856" y="36.5" />
-    </edge>
-    <edge source="FindRoute" target="Station">
-      <point x="-140.39999999999998" y="-59.0" />
-      <point x="588.05" y="700.0" />
-      <point x="374.6508928571428" y="700.0" />
-      <point x="60.0" y="59.0" />
+    <edge source="SubwayMap" target="MultiGraphADT">
+      <point x="0.0" y="-169.5" />
+      <point x="261.0" y="253.0" />
+      <point x="401.5" y="253.0" />
+      <point x="-76.5" y="114.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="456.00000000000006" y="258.0" />
-  <SelectedNodes />
+  <settings layout="Hierarchic Group" zoom="0.4054144052737885" x="737.5722377023276" y="513.0866116730159" />
+  <SelectedNodes>
+    <node>SubwayMap</node>
+  </SelectedNodes>
   <Categories>
     <Category>Fields</Category>
     <Category>Methods</Category>

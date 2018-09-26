@@ -13,7 +13,7 @@ public class Line implements Edge {
 
 
     @Override
-    public String getColor() {
+    public String getLabel() {
         return color;
     }
 

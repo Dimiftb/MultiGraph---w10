@@ -1,27 +1,22 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class SubwayMap implements MultiGraphADT {
 
     private int nStations;
-    private ArrayList<Station> stationList;
-    private ArrayList<HashMap<Station, ArrayList<Station>>> AdjacencyStationsList;// not sure if neeeded EdgeList implementation again
-    private HashMap<Station, Station> lines;
+    private List<Station> stations;
+    private List<Line> lines;
 
-    public SubwayMap(int stations ) {
-        nStations = stations;
-        stationList = new ArrayList<Station>();
-        lines = new HashMap<Station, Station>();
-        AdjacencyStationsList = new ArrayList<HashMap<Station, ArrayList<Station>>>();
+    public SubwayMap( ) {
+        stations = new ArrayList<>();
+        lines = new ArrayList<>();
 
-        for(int i = 0; i < AdjacencyStationsList.size(); i++) {
-            AdjacencyStationsList.add(new HashMap<>());
-        }
     }
 
     @Override
     public int nNodes() {
-        return nStations;
+        return stations.size();
     }
 
     @Override
@@ -30,18 +25,13 @@ public class SubwayMap implements MultiGraphADT {
     }
 
     @Override
-    public boolean addEdge(Node node1, Node node2) {
-
-        Station station1 = new Station(node1.getId(), node1.getName());
-        Station station2 = new Station(node2.getId(), node2.getName());
-
-
-        if(isEdge(node1, node2)){
+    public boolean addEdge(String label, Node node1, Node node2) {
+        if(isEdge(node1, node2)) {
             return false;
         }
         else {
-            lines.put(station1, station2);
-
+            Line e = new Line(label,node1,node2);
+            lines.add(e);
         }
         return true;
     }
@@ -53,25 +43,22 @@ public class SubwayMap implements MultiGraphADT {
 
     @Override
     public boolean isEdge(Node node1, Node node2) {
-
-        Station station1 = new Station(node1.getId(), node1.getName());
-        Station station2 = new Station(node2.getId(), node2.getName());
-
-        if(lines.containsKey(station1)){
-
-            return lines.get(station1).getId() == station2.getId();
+        for(Line e : lines){
+            if((e.getSrcNode().getId() == node1.getId()) && e.getDestNode().getId() == node2.getId() || (e.getSrcNode().getId() == node2.getId()) && e.getDestNode().getId() == node1.getId()){
+                return true;
+            }
         }
 
         return false;
+
     }
 
     @Override
-    public ArrayList<Node> successors(Node node) {
-        Station currentStation = new Station(node.getId(), node.getName());
-        ArrayList<Node> successors = new ArrayList<Node>();
-        for(Station srcStation: lines.keySet()) {
-           if(srcStation.equals(currentStation)) {
-                successors.add(lines.get(srcStation));
+    public List<Node> successors(Node node) {
+        List<Node> successors = new ArrayList<>();
+        for(Line e : lines){
+            if(e.getSrcNode().getId() == node.getId()){
+                successors.add(e.getDestNode());
             }
         }
         return successors;
@@ -80,19 +67,14 @@ public class SubwayMap implements MultiGraphADT {
 
 
     @Override
-    public ArrayList<Node> predecessors(Node node) {
-        ArrayList<Node> predecessors = new ArrayList<Node>();
-        Station currentStation = new Station(node.getId(), node.getName());
-        for(Station destStation: lines.values()) {
-            if(destStation.equals(node)) {
-                for(Station srcStation: lines.keySet()) {
-                    if(lines.get(srcStation).equals(destStation)) {
-                        predecessors.add(srcStation);
-                    }
-                }
+    public List<Node> predecessors(Node node) {
+        List<Node> predecessors = new ArrayList<>();
+
+        for(Line e : lines){
+            if(e.getDestNode().getId() == node.getId()){
+                predecessors.add(e.getSrcNode());
             }
         }
-
         return predecessors;
     }
 

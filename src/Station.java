@@ -19,4 +19,8 @@ public class Station implements Node{
     public String getName() {
         return name;
     }
+    @Override
+    public String toString(){
+        return this.getId() + "";
+    }
 }
