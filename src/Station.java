@@ -23,8 +23,7 @@ public class Station implements Node{
     }
     @Override
     public String toString(){
-
-        return this.getId() + "";
+        return this.getId() + " " + this.getName();
     }
     @Override
     public final int hashCode() {
@@ -32,7 +31,6 @@ public class Station implements Node{
     }
     @Override
     public boolean equals(Object o){
-        Station tempStation = (Station) o;
         return this.id == ((Station) o).getId()  && this.name.equals(((Station) o).getName());
     }
 
