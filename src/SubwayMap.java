@@ -66,28 +66,6 @@ public class SubwayMap implements MultiGraphADT {
     }
 
 
-    @Override
-    public List<Node> predecessors(Node node) {
-        List<Node> predecessors = new ArrayList<>();
-
-        for(Line e : lines){
-            if(e.getDestNode().getId() == node.getId()){
-                predecessors.add(e.getSrcNode());
-            }
-        }
-        return predecessors;
-    }
-
-    @Override
-    public int inDegree(Node node) {
-        return predecessors(node).size();
-    }
-
-    @Override
-    public int outDegree(Node node) {
-        return successors(node).size();
-    }
-
     private SubwayMap generateMap() {
 
         return null;

@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 public class Station implements Node{
 
     private int id;
@@ -21,6 +23,18 @@ public class Station implements Node{
     }
     @Override
     public String toString(){
+
         return this.getId() + "";
     }
+    @Override
+    public final int hashCode() {
+        return this.id >> 16;
+    }
+    @Override
+    public boolean equals(Object o){
+        Station tempStation = (Station) o;
+        return this.id == ((Station) o).getId()  && this.name.equals(((Station) o).getName());
+    }
+
+
 }
