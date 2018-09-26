@@ -82,14 +82,4 @@ public class SubwayMap implements MultiGraphADT {
         return stations.size();
     }
 
-    @Override
-    public List<Edge> getSources(Node source) {
-        List<Edge> sources = new ArrayList<>();
-        for(Edge e : lines){
-            if(e.getSrcNode().equals(source)){
-                sources.add(e);
-            }
-        }
-        return sources;
-    }
 }

@@ -55,7 +55,7 @@ public class Parser {
                 outbound = Integer.parseInt(st.nextToken());
                 Node outboundNode = map.getByID(outbound);
 
-                //IF THERES NO EDGE AND WE'RE TRYING TO ADD IT , JUST MAKE IT LAD.
+                ///THIS IS INCORRECT///
                 if (outboundNode != null) {
                     map.addEdge(lineName, outboundNode, newStation);
                 }

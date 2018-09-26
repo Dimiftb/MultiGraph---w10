@@ -11,6 +11,5 @@ public interface MultiGraphADT {
    List<Node> successors(Node node);
    Node getByID(int id);
    int getNumNodes();
-   List<Edge> getSources(Node source);
 
 }

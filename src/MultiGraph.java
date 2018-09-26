@@ -77,15 +77,4 @@ public class MultiGraph implements MultiGraphADT {
         return nodes.size();
     }
 
-    @Override
-    public List<Edge> getSources(Node source) {
-        List<Edge> sources = new ArrayList<>();
-        for(Edge e : edges){
-            if(e.getSrcNode().equals(source)){
-                sources.add(e);
-            }
-        }
-        return sources;
-    }
-
 }
