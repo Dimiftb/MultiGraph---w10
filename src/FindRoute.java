@@ -1,6 +1,5 @@
 import javax.sound.sampled.Line;
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.*;
 
 public class FindRoute {
 
@@ -14,7 +13,9 @@ public class FindRoute {
         this.destStation = destinationStation;
     }
 
-    public ArrayList<HashMap<Station, Line>> generateRoute() {
-            return null;
+    private List<Edge> findRoute(Node source, Node destination, MultiGraphADT graph){
+        boolean visited[] = new boolean[graph.getNumNodes()];
+
+    return new ArrayList<Edge>();
     }
 }

@@ -9,4 +9,8 @@ public interface MultiGraphADT {
    boolean addNode(int id, String name);
    boolean isEdge(Node node1, Node node2);
    List<Node> successors(Node node);
+   Node getByID(int id);
+   int getNumNodes();
+   List<Edge> getSources(Node source);
+
 }

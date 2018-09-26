@@ -13,6 +13,8 @@ public class MultiGraph implements MultiGraphADT {
 
     }
 
+
+
     @Override
     public int nNodes() {
         return nodes.size();
@@ -35,7 +37,9 @@ public class MultiGraph implements MultiGraphADT {
         }
         return true;
     }
-
+    public int numNodes(){
+        return nodes.size();
+    }
     @Override
     public boolean addNode(int id, String name) {
         Node node = new Station(id,name);
@@ -58,6 +62,30 @@ public class MultiGraph implements MultiGraphADT {
         }
         return successors;
 
+    }
+    public Node getByID(int id){
+        for(Node n : nodes){
+            if(n.getId() == id){
+                return n;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public int getNumNodes() {
+        return nodes.size();
+    }
+
+    @Override
+    public List<Edge> getSources(Node source) {
+        List<Edge> sources = new ArrayList<>();
+        for(Edge e : edges){
+            if(e.getSrcNode().equals(source)){
+                sources.add(e);
+            }
+        }
+        return sources;
     }
 
 }

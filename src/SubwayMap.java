@@ -38,7 +38,9 @@ public class SubwayMap implements MultiGraphADT {
 
     @Override
     public boolean addNode(int id, String name) {
-        return false;
+        Station n = new Station(id,name);
+        stations.add(n);
+        return true;
     }
 
     @Override
@@ -64,10 +66,28 @@ public class SubwayMap implements MultiGraphADT {
         return successors;
 
     }
-
-
-    private SubwayMap generateMap() {
-
+    public Node getByID(int id){
+        for(Node n : stations){
+            if(n.getId() == id){
+                return n;
+            }
+        }
         return null;
+    }
+
+    @Override
+    public int getNumNodes() {
+        return stations.size();
+    }
+
+    @Override
+    public List<Edge> getSources(Node source) {
+        List<Edge> sources = new ArrayList<>();
+        for(Edge e : lines){
+            if(e.getSrcNode().equals(source)){
+                sources.add(e);
+            }
+        }
+        return sources;
     }
 }

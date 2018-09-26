@@ -1,14 +1,12 @@
-public class test {
-    public static void main(String [] args){
-        MultiGraphADT m = new MultiGraph();
-            Node n1 = new Station(1,"Red");
-            Node n2 = new Station(2,"Red");
-            Node n3 = new Station(3,"Red");
-            Node n4 = new Station(4,"Red");
+import java.io.IOException;
 
-            m.addEdge("Line1", n3,n1);
-            m.addEdge("Line2",n3,n1);
-            System.out.println(m.successors(n1));
+public class test {
+    public static void main(String [] args) throws IOException, BadFileException {
+        MultiGraphADT m;
+           Parser p = new Parser("src/map.txt");
+           m = p.createMap();
+        System.out.println(m.getByID(2).getName());
+
     }
 
 }
