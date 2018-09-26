@@ -8,6 +8,7 @@ public class test {
 
             m.addEdge("Line1", n1,n2);
             m.addEdge("Line2",n3,n1);
+            m.addEdge("Line3", n2,n1);
             System.out.println(m.predecessors(n1));
     }
 

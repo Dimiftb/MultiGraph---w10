@@ -30,7 +30,7 @@ public class MultiGraph implements MultiGraphADT {
             return false;
         }
         else {
-            Edge e = new iEdge(label,node1,node2);
+            Edge e = new Line(label,node1,node2);
             edges.add(e);
         }
         return true;
@@ -38,7 +38,7 @@ public class MultiGraph implements MultiGraphADT {
 
     @Override
     public boolean addNode(int id, String name) {
-        Node node = new iNode(id,name);
+        Node node = new Station(id,name);
 
         nodes.add(node);
         return true;
