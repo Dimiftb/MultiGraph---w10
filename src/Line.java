@@ -1,11 +1,11 @@
-public class LineSegment implements Edge {
+public class Line implements Edge {
 
     private String color;
-    private int sourceStation;
-    private int destinationStation;
+    private Node sourceStation;
+    private Node destinationStation;
 
 
-    public LineSegment(String name, int srcNode, int destNode) {
+    public Line(String name, Node srcNode, Node destNode) {
         this.color = name;
         this.sourceStation = srcNode;
         this.destinationStation = destNode;
@@ -18,12 +18,12 @@ public class LineSegment implements Edge {
     }
 
     @Override
-    public int getSrcNode() {
+    public Node getSrcNode() {
         return sourceStation;
     }
 
     @Override
-    public int getDestNode() {
+    public Node getDestNode() {
         return destinationStation;
     }
 }

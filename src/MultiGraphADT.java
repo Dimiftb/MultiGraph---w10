@@ -5,6 +5,7 @@ public interface MultiGraphADT {
    int nNodes();
    int nEdges();
    boolean addEdge(Node node1, Node node2);
+   boolean addNode(int id, String name);
    boolean isEdge(Node node1, Node node2);
    ArrayList<Node> successors(Node node);
    ArrayList<Node> predecessors(Node node);

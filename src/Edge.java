@@ -1,7 +1,7 @@
 public interface Edge {
 
     String getColor();
-    int getSrcNode();
-    int getDestNode();
+    Node getSrcNode();
+    Node getDestNode();
 
 }

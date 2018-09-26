@@ -37,6 +37,11 @@ public class MultiGraph implements MultiGraphADT {
     }
 
     @Override
+    public boolean addNode(int id, String name) {
+        return false;
+    }
+
+    @Override
     public boolean isEdge(Node node1, Node node2) {
            if(edges.containsKey(node1)) {
                if(edges.get(node1).equals(node2)) {

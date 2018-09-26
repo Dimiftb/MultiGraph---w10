@@ -47,6 +47,11 @@ public class SubwayMap implements MultiGraphADT {
     }
 
     @Override
+    public boolean addNode(int id, String name) {
+        return false;
+    }
+
+    @Override
     public boolean isEdge(Node node1, Node node2) {
 
         Station station1 = new Station(node1.getId(), node1.getName());
