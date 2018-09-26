@@ -57,7 +57,7 @@ public class SubwayMap implements MultiGraphADT {
 
     @Override
     public List<Node> successors(Node node) {
-        System.out.println(node);
+
         List<Node> successors = new ArrayList<>();
         for(Line e : lines){
             if(e.getSrcNode().getId() == node.getId()){

@@ -26,4 +26,12 @@ public class Line implements Edge {
     public Node getDestNode() {
         return destinationStation;
     }
+    @Override
+    public final int hashCode() {
+        return this.getSrcNode().getId() >> 16 * this.getDestNode().getId();
+    }
+    @Override
+    public boolean equals(Object o){
+        return this.getSrcNode() == ((Line) o).getSrcNode()  && this.getDestNode().equals((Line)((Line) o).getDestNode());
+    }
 }
