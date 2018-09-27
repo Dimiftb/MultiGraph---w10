@@ -5,6 +5,9 @@ public class test {
         MultiGraphADT m;
            Parser p = new Parser("src/bostonmetro.txt");
             m = p.createMap();
+            FindRoute f = new FindRoute((SubwayMap) m);
+
+        System.out.println(f.findRoute(m.getByID(1),m.getByID(12)));
     }
 
 }

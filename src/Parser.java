@@ -55,7 +55,7 @@ public class Parser {
                 outbound = Integer.parseInt(st.nextToken());
                 Node outboundNode = map.getByID(outbound);
 
-                ///THIS IS INCORRECT///
+                ///THIS IS MAYBE INCORRECT///
                 if (outboundNode != null) {
                     map.addEdge(lineName, outboundNode, newStation);
                 }
