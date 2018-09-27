@@ -6,8 +6,9 @@ public class test {
            Parser p = new Parser("src/bostonmetro.txt");
             m = p.createMap();
            FindRoute f = new FindRoute(m);
-
-        System.out.println(m.getEdges());
+        Node test1 = new Station(1,"Oakgrove");
+        Node test2 = new Station(30,"DowntownCrossing");
+        System.out.println(f.findRoute(test1,test2));
     }
 
 }

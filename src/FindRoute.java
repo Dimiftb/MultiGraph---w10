@@ -11,6 +11,11 @@ public class FindRoute {
     }
 
     public List<Node> findRoute(Node source, Node destination) {
+        if(source.equals(destination)){
+            System.out.println("Errorm: Source is destination, try again");
+            return null;
+        }
+
         return null;
     }
 
