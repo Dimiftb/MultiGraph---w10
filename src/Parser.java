@@ -15,14 +15,14 @@ public class Parser {
         }
     }
 
-    public MultiGraphADT createMap() throws BadFileException, IOException {
+    public MultiGraph createMap() throws BadFileException, IOException {
         String line = fileInput.readLine();
         StringTokenizer st;
         String stationID;
         String lineName;
-        int outbound, inbound;
+        int outboundID, inboundID;
         String stationName;
-        SubwayMap map = new SubwayMap();
+        MultiGraph map = new MultiGraph();
 
         while (line != null) {
             st = new StringTokenizer(line);
@@ -41,9 +41,8 @@ public class Parser {
                 fileInput.close();
                 throw new BadFileException("NO LINES FOR THE STATION");
             }
-
-            Node newStation = new Station(Integer.parseInt(stationID), stationName);
-            map.addNode(Integer.parseInt(stationID), stationName);
+            Station station = new Station(Integer.parseInt(stationID), stationName);
+            map.addNode(station);
             while (st.hasMoreTokens()) {
 
                 lineName = st.nextToken();
@@ -52,25 +51,22 @@ public class Parser {
                     fileInput.close();
                     throw new BadFileException("BAD FORMAT");
                 }
-                outbound = Integer.parseInt(st.nextToken());
-                Node outboundNode = map.getByID(outbound);
-
-                ///THIS IS MAYBE INCORRECT///
-                if (outboundNode != null) {
-                    map.addEdge(lineName, outboundNode, newStation);
-                }
+                outboundID = Integer.parseInt(st.nextToken());
 
                 if (!st.hasMoreTokens()) {
                     fileInput.close();
                     throw new BadFileException("BAD ADJACENCY");
                 }
-                //SAME AGAIN
-                inbound = Integer.parseInt(st.nextToken());
-                Node inboundNode = map.getByID(inbound);
 
-                if (inboundNode != null) {
-                    map.addEdge(lineName, newStation, inboundNode);
-                }
+                inboundID = Integer.parseInt(st.nextToken());
+
+                Line outbound = new Line(lineName,inboundID, Integer.parseInt(stationID));
+                Line inbound = new Line(lineName,outboundID,Integer.parseInt(stationID));
+                map.addEdge(outbound);
+                map.addEdge(inbound);
+
+
+
             }
 
             line = fileInput.readLine();
