@@ -4,18 +4,17 @@ import java.util.*;
 
 public class FindRoute {
 
-    private SubwayMap graph;
+    private MultiGraphADT graph;
 
-    public FindRoute(SubwayMap graph) {
+    public FindRoute(MultiGraphADT graph) {
         this.graph = graph;
     }
 
-    public List<Edge> findRoute(Node source, Node destination) {
+    public List<Node> findRoute(Node source, Node destination) {
         Set visited = new HashSet<Node>();
         Queue<Node> queue = new LinkedList();
-        Node startNode = source;
 
-        if(startNode.equals(destination)){
+        if(source.equals(destination)){
             System.out.println("Goal found, ending");
 
         }
@@ -32,7 +31,7 @@ public class FindRoute {
             }
             else{
                 if(graph.successors(current).isEmpty()){
-                    return null;
+                    continue;
                 }
                 else{
                     queue.addAll(graph.successors(current));
