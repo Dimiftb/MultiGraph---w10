@@ -1,5 +1,3 @@
-import javax.sound.sampled.Line;
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class FindRoute {
@@ -12,7 +10,7 @@ public class FindRoute {
 
     public List<Node> findRoute(Node source, Node destination) {
         if(source.equals(destination)){
-            System.out.println("Errorm: Source is destination, try again");
+            System.out.println("Error: Source is destination, try again");
             return null;
         }
 

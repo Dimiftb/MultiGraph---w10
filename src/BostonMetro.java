@@ -1,14 +1,10 @@
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-
-public class SubwayMap {
+public class BostonMetro {
 
     private MultiGraphADT multiGraph;
     private Parser p ;
 
-    public SubwayMap( ) {
+    public BostonMetro( ) {
         Node source = null;
         Node destination = null;
         p = new Parser("src/bostonmetro.txt");

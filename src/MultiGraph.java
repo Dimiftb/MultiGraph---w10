@@ -47,6 +47,15 @@ public class MultiGraph implements MultiGraphADT {
        }
        return false;
     }
+    //Temporary
+    public Edge returnEdge(Node n1, Node n2){
+        for(Edge e : edges){
+            if(e.getSrcNode() == n1.getId() && e.getDestNode() == n2.getId()){
+                return e;
+            }
+        }
+        return null;
+    }
 
     @Override
     public List<Node> successors(Node node) {
