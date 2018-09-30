@@ -80,9 +80,6 @@ public class MultiGraph implements MultiGraphADT {
         return null;
     }
 
-    @Override
-    public int getNumNodes() {
-        return nodes.size();
     }
     public List<Edge> getEdges(){
         return edges;
