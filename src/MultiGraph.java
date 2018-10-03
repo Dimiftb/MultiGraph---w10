@@ -30,11 +30,10 @@ public class MultiGraph implements MultiGraphADT {
         nodes.add(n);
         return true;
     }
+
         /*
          * @params Nodes to check if an edge exists between them
          */
-
-
     public boolean isEdge(Node node1, Node node2) {
 
        for(Edge e : edges){

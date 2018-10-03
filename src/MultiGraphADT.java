@@ -10,6 +10,5 @@ public interface MultiGraphADT {
    boolean isEdge(Node node1, Node node2);
    List<Node> successors(Node node);
    Node getNode(int id);
-
-
+   Node getNodeByName(String name);
 }
