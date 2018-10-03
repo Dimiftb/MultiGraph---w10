@@ -42,9 +42,6 @@ public class MultiGraph implements MultiGraphADT {
 
     public boolean isEdge(Node node1, Node node2) {
        for(Edge e : edges){
-           if(e.getSrcNode().getId()==0 || e.getDestNode().getId() == 0){
-               return false;
-           }
            if(e.getSrcNode().getId() == node1.getId() && e.getDestNode().getId() == node2.getId()
                    || e.getDestNode().getId() == node1.getId() && e.getSrcNode().getId() == node2.getId()){
                return true;
@@ -65,6 +62,14 @@ public class MultiGraph implements MultiGraphADT {
         }
         return successors;
 
+    }
+    public Node getNodeByName(String name){
+        for(Node n : nodes){
+            if(n.getName().toLowerCase().replaceAll(" ", "").equals(name.toLowerCase().replaceAll(" ",""))){
+                return n;
+            }
+        }
+        return null;
     }
     public Node getNode(int id){
             for(Node n : nodes){

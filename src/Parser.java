@@ -23,8 +23,6 @@ public class Parser {
         String line = fileInput.readLine();
         StringTokenizer st;
         String stationID;
-        String lineName;
-        int outboundID, inboundID;
         String stationName;
 
         while (line != null) {
@@ -49,7 +47,6 @@ public class Parser {
 
             line = fileInput.readLine();
         }
-
         getEdges();
         return map;
     }
@@ -78,20 +75,14 @@ public class Parser {
             st.nextToken();
 
             while (st.hasMoreTokens()) {
+
                 lineName = st.nextToken();
-
-
                 if (!st.hasMoreTokens()) {
                     fileInput.close();
                     throw new BadFileException("BAD FORMAT");
                 }
-
                 outboundID = Integer.parseInt(st.nextToken());
                 outboundStation = map.getNode(outboundID);
-
-                if(outboundStation == null){
-
-                }
 
                 if (!st.hasMoreTokens()) {
                     fileInput.close();
@@ -101,15 +92,16 @@ public class Parser {
                 inboundID = Integer.parseInt(st.nextToken());
                 inboundStation = map.getNode(inboundID);
 
-                if(inboundStation == null){
+                if(inboundStation == null || outboundStation == null){
 
                 }
+                else {
 
-                Line inbound = new Line(lineName,outboundStation,stationStation);
-                Line outbound = new Line(lineName, stationStation,inboundStation);
-                map.addEdge(outbound);
-                map.addEdge(inbound);
-
+                    Line inbound = new Line(lineName, outboundStation, stationStation);
+                    Line outbound = new Line(lineName, stationStation, inboundStation);
+                    map.addEdge(outbound);
+                    map.addEdge(inbound);
+                }
 
 
 

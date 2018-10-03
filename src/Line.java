@@ -5,10 +5,10 @@ public class Line implements Edge {
     private Node destinationStation;
 
 
-    public Line(String name, Node srcID, Node destID) {
+    public Line(String name, Node src, Node dest) {
         this.color = name;
-        this.sourceStation = srcID;
-        this.destinationStation = destID;
+        this.sourceStation = src;
+        this.destinationStation = dest;
     }
 
 
