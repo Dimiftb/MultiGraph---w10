@@ -74,5 +74,5 @@ public class MultiGraph implements MultiGraphADT {
             }
             return null;
     }
-    
+
 }
