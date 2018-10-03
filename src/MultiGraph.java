@@ -9,7 +9,6 @@ public class MultiGraph implements MultiGraphADT {
         edges = new ArrayList<>();
         nodes = new ArrayList<>();
 
-
     }
 
 
@@ -80,7 +79,6 @@ public class MultiGraph implements MultiGraphADT {
         return null;
     }
 
-    }
     public List<Edge> getEdges(){
         return edges;
     }
