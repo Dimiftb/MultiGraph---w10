@@ -19,10 +19,6 @@ public class BostonMetro {
     }
 
     public void run() {
-        Node n1 = new Station(25,"asdf1");
-        Node n2 = new Station(29,"asdf1");
-
-        System.out.println(multiGraph.isEdge(n1,n2));
         srcStation = null;
         desStation = null;
 
@@ -75,9 +71,6 @@ public class BostonMetro {
                 }
             }
         }
-
-        System.out.println(srcStation);
-        System.out.println(desStation);
     }
 
 }
