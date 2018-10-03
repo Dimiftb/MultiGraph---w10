@@ -1,11 +1,11 @@
 public class Line implements Edge {
 
     private String color;
-    private int sourceStation;
-    private int destinationStation;
+    private Node sourceStation;
+    private Node destinationStation;
 
 
-    public Line(String name, int srcID, int destID) {
+    public Line(String name, Node srcID, Node destID) {
         this.color = name;
         this.sourceStation = srcID;
         this.destinationStation = destID;
@@ -18,17 +18,17 @@ public class Line implements Edge {
     }
 
     @Override
-    public int getSrcNode() {
+    public Node getSrcNode() {
         return sourceStation;
     }
 
     @Override
-    public int getDestNode() {
+    public Node getDestNode() {
         return destinationStation;
     }
     @Override
     public final int hashCode() {
-        return this.getSrcNode() >> 16 * this.getDestNode();
+        return this.getSrcNode().getId() >> 16 * this.getDestNode().getId();
     }
     @Override
     public boolean equals(Object o){

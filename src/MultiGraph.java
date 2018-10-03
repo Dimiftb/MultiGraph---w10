@@ -36,26 +36,18 @@ public class MultiGraph implements MultiGraphADT {
         nodes.add(n);
         return true;
     }
-
+        /*
+         * @params Nodes to check if an edge exists between them
+         */
     @Override
     public boolean isEdge(Node node1, Node node2) {
        for(Edge e : edges){
-           if(e.getSrcNode() == node1.getId() && e.getDestNode()== node2.getId()){
+           if(e.getSrcNode().getId() == node1.getId() && e.getDestNode().getId() == node2.getId()){
                return true;
            }
        }
        return false;
     }
-    //Temporary
-    public Edge returnEdge(Node n1, Node n2){
-        for(Edge e : edges){
-            if(e.getSrcNode() == n1.getId() && e.getDestNode() == n2.getId()){
-                return e;
-            }
-        }
-        return null;
-    }
-
     @Override
     public List<Node> successors(Node node) {
         List<Node> successors = new ArrayList<>();
@@ -71,12 +63,10 @@ public class MultiGraph implements MultiGraphADT {
 
     }
     public Node getNode(int id){
-        for(Node n : nodes){
-            if(n.getId() == id){
-                return n;
-            }
+        if(id == 0){
+            return null;
         }
-        return null;
+            return nodes.get(id-1);
     }
 
     public List<Edge> getEdges(){

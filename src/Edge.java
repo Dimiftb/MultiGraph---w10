@@ -2,7 +2,7 @@ public interface Edge {
 
 
     String getLabel();
-    int getSrcNode();
-    int getDestNode();
+    Node getSrcNode();
+    Node getDestNode();
 
 }
