@@ -19,7 +19,7 @@ public class Parser {
         }
     }
 
-    public MultiGraph createMap() throws BadFileException, IOException {
+    public MultiGraph createMap(MultiGraph map) throws BadFileException, IOException {
         String line = fileInput.readLine();
         StringTokenizer st;
         String stationID;
@@ -67,11 +67,11 @@ public class Parser {
 
         while (line != null) {
 
-            Node outboundStation;
-            Node inboundStation;
+            Station outboundStation;
+            Station inboundStation;
             st = new StringTokenizer(line);
             int stationID = Integer.parseInt(st.nextToken());
-            Node stationStation = map.getNode(stationID);
+            Station stationStation = (Station)map.getNode(stationID);
             st.nextToken();
 
             while (st.hasMoreTokens()) {
@@ -82,7 +82,7 @@ public class Parser {
                     throw new BadFileException("BAD FORMAT");
                 }
                 outboundID = Integer.parseInt(st.nextToken());
-                outboundStation = map.getNode(outboundID);
+                outboundStation = (Station) map.getNode(outboundID);
 
                 if (!st.hasMoreTokens()) {
                     fileInput.close();
@@ -90,7 +90,7 @@ public class Parser {
                 }
 
                 inboundID = Integer.parseInt(st.nextToken());
-                inboundStation = map.getNode(inboundID);
+                inboundStation = (Station) map.getNode(inboundID);
 
                 if(inboundStation == null || outboundStation == null){
 

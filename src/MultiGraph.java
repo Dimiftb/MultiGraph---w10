@@ -4,15 +4,12 @@ import java.util.*;
 public class MultiGraph implements MultiGraphADT {
     private List<Edge> edges;
     private List<Node> nodes;
-
+    private Map<Node, List<Node>> edgeMap;
     public MultiGraph() {
         edges = new ArrayList<>();
         nodes = new ArrayList<>();
 
     }
-
-
-
 
     public int nNodes() {
         return nodes.size();
@@ -26,10 +23,8 @@ public class MultiGraph implements MultiGraphADT {
 
     public boolean addEdge(Edge e) {
         edges.add(e);
+        edgeMap.get(e.getSrcNode()).add(e.getDestNode());
         return true;
-    }
-    public int numNodes(){
-        return nodes.size();
     }
     public boolean addNode(Node n) {
         nodes.add(n);
@@ -41,6 +36,7 @@ public class MultiGraph implements MultiGraphADT {
 
 
     public boolean isEdge(Node node1, Node node2) {
+
        for(Edge e : edges){
            if(e.getSrcNode().getId() == node1.getId() && e.getDestNode().getId() == node2.getId()
                    || e.getDestNode().getId() == node1.getId() && e.getSrcNode().getId() == node2.getId()){

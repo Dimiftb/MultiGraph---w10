@@ -2,18 +2,19 @@ import java.io.IOException;
 
 public class BostonMetro {
 
-    private MultiGraphADT multiGraph;
+    private MultiGraph multiGraph;
     private Parser p;
 
-    public BostonMetro() {
+    public BostonMetro() throws IOException, BadFileException {
         p = new Parser("src/bostonmetro.txt");
+        multiGraph = p.createMap(multiGraph);
         run();
 
     }
 
     private void run() {
         try {
-            multiGraph = p.createMap();
+            multiGraph = p.createMap(multiGraph);
         } catch (BadFileException e) {
             System.out.println("Error, there is issues in the file");
         } catch (IOException e){
