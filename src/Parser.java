@@ -6,11 +6,11 @@ import java.util.StringTokenizer;
 
 public class Parser {
     private BufferedReader fileInput;
-    private MultiGraph map;
+
     private String filename;
 
     public Parser(String filename) {
-        map = new MultiGraph();
+
         try {
             fileInput = new BufferedReader(new FileReader(filename));
             this.filename = filename;
@@ -43,38 +43,18 @@ public class Parser {
                 throw new BadFileException("NO LINES FOR THE STATION");
             }
             Station station = new Station(Integer.parseInt(stationID), stationName);
+
             map.addNode(station);
 
-            line = fileInput.readLine();
-        }
-        getEdges();
-        return map;
-    }
-
-
-    private void getEdges() throws IOException, BadFileException {
-        fileInput = new BufferedReader(new FileReader(filename));
-
-        String line;
-        StringTokenizer st;
-        String lineName;
-
-        int outboundID;
-        int inboundID;
-
-        line = fileInput.readLine();
-
-
-        while (line != null) {
-
-            Station outboundStation;
-            Station inboundStation;
-            st = new StringTokenizer(line);
-            int stationID = Integer.parseInt(st.nextToken());
-            Station stationStation = (Station) map.getNode(stationID);
-            st.nextToken();
-
             while (st.hasMoreTokens()) {
+
+                Station outboundStation;
+                Station inboundStation;
+
+
+                String lineName;
+                int outboundID;
+                int inboundID;
 
                 lineName = st.nextToken();
                 if (!st.hasMoreTokens()) {
@@ -92,26 +72,34 @@ public class Parser {
                 inboundID = Integer.parseInt(st.nextToken());
                 inboundStation = (Station) map.getNode(inboundID);
 
-                if(inboundStation == null || outboundStation == null){
+                if (inboundStation == null || outboundStation == null) {
 
-                }
-                else {
+                } else {
 
-                    Line inbound = new Line(lineName, outboundStation, stationStation);
-                    Line outbound = new Line(lineName, stationStation, inboundStation);
+                    Line inbound = new Line(lineName, outboundStation, station);
+                    Line outbound = new Line(lineName, station, inboundStation);
                     map.addEdge(outbound);
                     map.addEdge(inbound);
                 }
 
 
-
-
                 line = fileInput.readLine();
+
 
             }
 
-        }
 
+        }
+        return map;
     }
 }
+
+
+
+
+
+
+
+
+
 

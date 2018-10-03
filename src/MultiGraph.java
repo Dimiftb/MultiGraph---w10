@@ -23,7 +23,6 @@ public class MultiGraph implements MultiGraphADT {
 
     public boolean addEdge(Edge e) {
         edges.add(e);
-        edgeMap.get(e.getSrcNode()).add(e.getDestNode());
         return true;
     }
     public boolean addNode(Node n) {
@@ -37,7 +36,9 @@ public class MultiGraph implements MultiGraphADT {
     public boolean isEdge(Node node1, Node node2) {
 
        for(Edge e : edges){
+
            if(e.getSrcNode().getId() == node1.getId() && e.getDestNode().getId() == node2.getId()
+
                    || e.getDestNode().getId() == node1.getId() && e.getSrcNode().getId() == node2.getId()){
                return true;
            }

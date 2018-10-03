@@ -14,14 +14,18 @@ public class BostonMetro {
         multiGraph = new MultiGraph();
 
         p.createMap((MultiGraph) multiGraph);
-
         run();
 
     }
 
     public void run() {
+        Node n1 = new Station(25,"asdf1");
+        Node n2 = new Station(29,"asdf1");
+
+        System.out.println(multiGraph.isEdge(n1,n2));
         srcStation = null;
         desStation = null;
+
         Scanner input;
         String stat1;
         String stat2;
