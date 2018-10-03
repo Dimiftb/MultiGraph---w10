@@ -6,9 +6,11 @@ import java.util.StringTokenizer;
 
 public class Parser {
     private BufferedReader fileInput;
+    private MultiGraph map;
     private String filename;
 
     public Parser(String filename) {
+        map = new MultiGraph();
         try {
             fileInput = new BufferedReader(new FileReader(filename));
             this.filename = filename;
@@ -17,14 +19,13 @@ public class Parser {
         }
     }
 
-    public MultiGraphADT createMap(MultiGraph map) throws BadFileException, IOException {
+    public MultiGraph createMap(MultiGraph map) throws BadFileException, IOException {
         String line = fileInput.readLine();
         StringTokenizer st;
         String stationID;
         String stationName;
 
         while (line != null) {
-
             st = new StringTokenizer(line);
 
             if (!st.hasMoreTokens()) {
@@ -45,14 +46,13 @@ public class Parser {
             map.addNode(station);
 
             line = fileInput.readLine();
-
         }
-        getEdges(map);
+        getEdges();
         return map;
     }
 
 
-    private void getEdges(MultiGraph map) throws IOException, BadFileException {
+    private void getEdges() throws IOException, BadFileException {
         fileInput = new BufferedReader(new FileReader(filename));
 
         String line;

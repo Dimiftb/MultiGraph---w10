@@ -11,8 +11,10 @@ public class BostonMetro {
 
     public BostonMetro() throws IOException, BadFileException {
         p = new Parser("src/bostonmetro.txt");
+        multiGraph = new MultiGraph();
 
-        multiGraph = p.createMap((MultiGraph) multiGraph);
+        p.createMap((MultiGraph) multiGraph);
+
         run();
 
     }
