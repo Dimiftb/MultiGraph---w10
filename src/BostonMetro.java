@@ -34,7 +34,7 @@ public class BostonMetro {
             System.out.println("Enter current station");
             input = new Scanner(System.in);
             stat1 = input.next();
-            if(stat1.equals("St.PaulStreet")){
+            if(stat1.toLowerCase().equals("st.paulstreet")){
                 while(id != 38 && id != 61) {
                     System.out.println("Do you mean St.PaulStreet with id 38 or 61?");
                     input = new Scanner(System.in);
@@ -56,7 +56,7 @@ public class BostonMetro {
             System.out.println("Enter destination station");
             input = new Scanner(System.in);
             stat2 = input.next();
-            if(stat2.equals("St.PaulStreet")){
+            if(stat2.toLowerCase().equals("st.paulstreet")){
                 while(id != 38 && id != 61) {
                     System.out.println("Do you mean St.PaulStreet with id 38 or 61? ");
                     input = new Scanner(System.in);
