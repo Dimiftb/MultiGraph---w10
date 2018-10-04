@@ -3,24 +3,19 @@ import java.util.Scanner;
 
 public class BostonMetro {
 
-
-    private Node srcStation;
-    private Node desStation;
-    private MultiGraph multiGraph;
+    private MultiGraphADT multiGraph;
     private Parser p;
 
     public BostonMetro() throws IOException, BadFileException {
         p = new Parser("src/bostonmetro.txt");
         multiGraph = new MultiGraph();
-
-        p.createMap((MultiGraph) multiGraph);
+        p.createMap(multiGraph);
         run();
-
     }
 
     public void run() {
-        srcStation = null;
-        desStation = null;
+        Node srcStation = null;
+        Node desStation = null;
 
         Scanner input;
         String stat1;
@@ -51,7 +46,7 @@ public class BostonMetro {
             }
         }
 
-        while (desStation == null || desStation == srcStation ) {
+        while (desStation == null || desStation.equals(srcStation) ) {
             id = 5000;
             System.out.println("Enter destination station");
             input = new Scanner(System.in);
@@ -68,9 +63,10 @@ public class BostonMetro {
                 desStation = multiGraph.getNodeByName(stat2);
                 if (desStation == null) {
                     System.out.println(stat2 + " is not a station");
+                } else if (desStation.equals(srcStation)){
+                    System.out.println(stat2 + " is the same station as current station, enter a different station");
                 }
             }
         }
     }
-
 }

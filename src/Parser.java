@@ -19,7 +19,7 @@ public class Parser {
         }
     }
 
-    public MultiGraph createMap(MultiGraph map) throws BadFileException, IOException {
+    public void createMap(MultiGraphADT map) throws BadFileException, IOException {
         String line = fileInput.readLine();
         StringTokenizer st;
         String stationID;
@@ -70,16 +70,16 @@ public class Parser {
                 inboundID = Integer.parseInt(st.nextToken());
                 inboundStation = (Station) map.getNode(inboundID);
 
-                    if(inboundID == 0 || outboundID == 0 ){
-                        line = fileInput.readLine();
-                        continue;
-                    }
-                    Line inbound = new Line(lineName, outboundStation, station);
-                    Line outbound = new Line(lineName, station, inboundStation);
-                    map.addEdge(outbound);
-                    map.addEdge(inbound);
+                if (inboundID == 0 || outboundID == 0) {
+                    line = fileInput.readLine();
+                    continue;
+                }
+                Line inbound = new Line(lineName, outboundStation, station);
+                Line outbound = new Line(lineName, station, inboundStation);
+                map.addEdge(outbound);
+                map.addEdge(inbound);
 
-                if(st.hasMoreTokens()){
+                if (st.hasMoreTokens()) {
                     continue;
                 }
 
@@ -87,10 +87,7 @@ public class Parser {
 
 
             }
-
-
         }
-        return map;
     }
 }
 
