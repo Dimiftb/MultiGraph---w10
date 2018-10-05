@@ -9,7 +9,7 @@ public class BostonMetro {
     public BostonMetro() throws IOException, BadFileException {
         p = new Parser("src/bostonmetro.txt");
         multiGraph = new MultiGraph();
-        p.createMap(multiGraph);
+        p.createMap((MultiGraph) multiGraph);
         run();
     }
 
@@ -22,7 +22,7 @@ public class BostonMetro {
         String stat2;
         int id = 5000;
 
-        System.out.println(multiGraph.getedges());
+
         while (srcStation == null) {
 
 
