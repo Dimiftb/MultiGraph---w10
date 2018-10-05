@@ -34,9 +34,7 @@ public class BostonMetro {
                 if (srcStation == null) {
                     System.out.println(stat1 + " is not a station");
                 }
-                else{
-                    //FIND ROUTE NOW AND RETURN/PRINT STUFF
-                }
+
             }
         }
 
@@ -57,11 +55,9 @@ public class BostonMetro {
                 } else if (desStation.equals(srcStation)) {
                     System.out.println(stat2 + " is the same station as current station, enter a different station");
                 }
-                else{
-                    //FIND ROUTE NOW AND RETURN/PRINT STUFF
-                }
             }
         }
+        System.out.println("Finding your route!!");
     }
 
     private Node handleStPaul(){
