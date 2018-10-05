@@ -20,41 +20,55 @@ public class Parser {
     }
 
     public MultiGraph createMap(MultiGraph map) throws BadFileException, IOException {
-        String line = fileInput.readLine();
+        String line;
         StringTokenizer st;
-        String stationID;
+        int stationID;
         String stationName;
+        line = fileInput.readLine();
 
         while (line != null) {
             st = new StringTokenizer(line);
-
-            if (!st.hasMoreTokens()) {
-                line = fileInput.readLine();
-                continue;
-            }
-            stationID = st.nextToken();
+            stationID = Integer.parseInt(st.nextToken());
             if (!st.hasMoreTokens()) {
                 fileInput.close();
                 throw new BadFileException("NO STATION NAME");
             }
+
             stationName = st.nextToken();
+
             if (!st.hasMoreTokens()) {
                 fileInput.close();
                 throw new BadFileException("NO LINES FOR THE STATION");
             }
-            Station station = new Station(Integer.parseInt(stationID), stationName);
+
+            Station station = new Station(stationID, stationName);
 
             map.addNode(station);
+            line = fileInput.readLine();
 
-            while (st.hasMoreTokens()) {
 
+        }
+
+            fileInput = new BufferedReader(new FileReader(filename));
+            line = fileInput.readLine();
+
+            while (line != null) {
+                st = new StringTokenizer(line);
                 Station outboundStation;
                 Station inboundStation;
+                Station homeStation;
+
                 String lineName;
                 int outboundID;
                 int inboundID;
+                int homeStationID;
 
+
+                homeStationID = Integer.parseInt(st.nextToken());
+                homeStation = (Station) map.getNode(homeStationID);
+                st.nextToken();
                 lineName = st.nextToken();
+
                 if (!st.hasMoreTokens()) {
                     fileInput.close();
                     throw new BadFileException("BAD FORMAT");
@@ -74,22 +88,20 @@ public class Parser {
                         line = fileInput.readLine();
                         continue;
                     }
-                    Line inbound = new Line(lineName, outboundStation, station);
-                    Line outbound = new Line(lineName, station, inboundStation);
+                    Line inbound = new Line(lineName, outboundStation, homeStation);
+                    Line outbound = new Line(lineName, homeStation, inboundStation);
                     map.addEdge(outbound);
                     map.addEdge(inbound);
 
-                if(st.hasMoreTokens()){
-                    continue;
-                }
-
                 line = fileInput.readLine();
+
+
 
 
             }
 
 
-        }
+
         return map;
     }
 }

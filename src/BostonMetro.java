@@ -27,7 +27,7 @@ public class BostonMetro {
         String stat2;
         int id = 5000;
 
-
+        System.out.println(multiGraph.getedges());
         while (srcStation == null) {
 
 
