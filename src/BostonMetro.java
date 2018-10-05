@@ -44,7 +44,9 @@ public class BostonMetro {
             id = 5000;
             System.out.println("Enter destination station");
             input = new Scanner(System.in);
+
             stat2 = input.next();
+
             if (stat2.toLowerCase().equals("st.paulstreet")) {
                desStation = handleStPaul();
 
@@ -72,8 +74,8 @@ public class BostonMetro {
             System.out.println("Do you mean St.PaulStreet with id 38 or 61? ");
             id = s.nextInt();
             station = multiGraph.getNode(id);
-            if(station.getId() != 38 || station.getId() != 61 )
-                System.out.println("Enter 38 or 61 for either St.Paul Street");
+            if(station == null )
+                System.out.println("Station not found, please enter 38 or 61 for either St.Paul Street");
         }
 
 
