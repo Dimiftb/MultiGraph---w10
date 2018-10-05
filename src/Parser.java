@@ -6,11 +6,9 @@ import java.util.StringTokenizer;
 
 public class Parser {
     private BufferedReader fileInput;
-
     private String filename;
 
     public Parser(String filename) {
-
         try {
             fileInput = new BufferedReader(new FileReader(filename));
             this.filename = filename;
@@ -19,7 +17,7 @@ public class Parser {
         }
     }
 
-    public MultiGraph createMap(MultiGraph map) throws BadFileException, IOException {
+    public void createMap(MultiGraphADT map) throws BadFileException, IOException {
         String line;
         StringTokenizer st;
         int stationID;
@@ -49,60 +47,52 @@ public class Parser {
 
         }
 
-            fileInput = new BufferedReader(new FileReader(filename));
-            line = fileInput.readLine();
+        fileInput = new BufferedReader(new FileReader(filename));
+        line = fileInput.readLine();
 
-            while (line != null) {
-                st = new StringTokenizer(line);
-                Station outboundStation;
-                Station inboundStation;
-                Station homeStation;
+        while (line != null) {
+            st = new StringTokenizer(line);
+            Station outboundStation;
+            Station inboundStation;
+            Station homeStation;
 
-                String lineName;
-                int outboundID;
-                int inboundID;
-                int homeStationID;
-
-
-                homeStationID = Integer.parseInt(st.nextToken());
-                homeStation = (Station) map.getNode(homeStationID);
-                st.nextToken();
-                lineName = st.nextToken();
-
-                if (!st.hasMoreTokens()) {
-                    fileInput.close();
-                    throw new BadFileException("BAD FORMAT");
-                }
-                outboundID = Integer.parseInt(st.nextToken());
-                outboundStation = (Station) map.getNode(outboundID);
-
-                if (!st.hasMoreTokens()) {
-                    fileInput.close();
-                    throw new BadFileException("BAD ADJACENCY");
-                }
-
-                inboundID = Integer.parseInt(st.nextToken());
-                inboundStation = (Station) map.getNode(inboundID);
-
-                    if(inboundID == 0 || outboundID == 0 ){
-                        line = fileInput.readLine();
-                        continue;
-                    }
-                    Line inbound = new Line(lineName, outboundStation, homeStation);
-                    Line outbound = new Line(lineName, homeStation, inboundStation);
-                    map.addEdge(outbound);
-                    map.addEdge(inbound);
-
-                line = fileInput.readLine();
+            String lineName;
+            int outboundID;
+            int inboundID;
+            int homeStationID;
 
 
+            homeStationID = Integer.parseInt(st.nextToken());
+            homeStation = (Station) map.getNode(homeStationID);
+            st.nextToken();
+            lineName = st.nextToken();
 
+            if (!st.hasMoreTokens()) {
+                fileInput.close();
+                throw new BadFileException("BAD FORMAT");
+            }
+            outboundID = Integer.parseInt(st.nextToken());
+            outboundStation = (Station) map.getNode(outboundID);
 
+            if (!st.hasMoreTokens()) {
+                fileInput.close();
+                throw new BadFileException("BAD ADJACENCY");
             }
 
+            inboundID = Integer.parseInt(st.nextToken());
+            inboundStation = (Station) map.getNode(inboundID);
 
+            if (inboundID == 0 || outboundID == 0) {
+                line = fileInput.readLine();
+                continue;
+            }
+            Line inbound = new Line(lineName, outboundStation, homeStation);
+            Line outbound = new Line(lineName, homeStation, inboundStation);
+            map.addEdge(outbound);
+            map.addEdge(inbound);
 
-        return map;
+            line = fileInput.readLine();
+        }
     }
 }
 
