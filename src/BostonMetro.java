@@ -10,7 +10,6 @@ public class BostonMetro {
         p = new Parser("src/bostonmetro.txt");
         multiGraph = new MultiGraph();
         p.createMap(multiGraph);
-        run();
     }
 
     public void run() {
@@ -28,18 +27,15 @@ public class BostonMetro {
             input = new Scanner(System.in);
             stat1 = input.next();
             if (stat1.toLowerCase().equals("st.paulstreet")) {
-                while (id != 38 && id != 61) {
-                    System.out.println("Do you mean St.PaulStreet with id 38 or 61?");
-                    input = new Scanner(System.in);
-                    id = input.nextInt();
-                    srcStation = multiGraph.getNode(id);
-
-                }
+                   srcStation = handleStPaul();
 
             } else {
                 srcStation = multiGraph.getNodeByName(stat1);
                 if (srcStation == null) {
                     System.out.println(stat1 + " is not a station");
+                }
+                else{
+                    //FIND ROUTE NOW AND RETURN/PRINT STUFF
                 }
             }
         }
@@ -50,12 +46,7 @@ public class BostonMetro {
             input = new Scanner(System.in);
             stat2 = input.next();
             if (stat2.toLowerCase().equals("st.paulstreet")) {
-                while (id != 38 && id != 61) {
-                    System.out.println("Do you mean St.PaulStreet with id 38 or 61? ");
-                    input = new Scanner(System.in);
-                    id = input.nextInt();
-                    desStation = multiGraph.getNode(id);
-                }
+               desStation = handleStPaul();
 
             } else {
                 desStation = multiGraph.getNodeByName(stat2);
@@ -64,7 +55,21 @@ public class BostonMetro {
                 } else if (desStation.equals(srcStation)) {
                     System.out.println(stat2 + " is the same station as current station, enter a different station");
                 }
+                else{
+                    //FIND ROUTE NOW AND RETURN/PRINT STUFF
+                }
             }
         }
+    }
+    private Node handleStPaul(){
+        Scanner s = new Scanner(System.in);
+        int id = s.nextInt();
+        Node station = null;
+        while (id != 38 && id != 61) {
+            System.out.println("Do you mean St.PaulStreet with id 38 or 61? ");
+            id = s.nextInt();
+            station = multiGraph.getNode(id);
+        }
+        return station;
     }
 }
