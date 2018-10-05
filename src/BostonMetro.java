@@ -61,15 +61,22 @@ public class BostonMetro {
             }
         }
     }
+
     private Node handleStPaul(){
         Scanner s = new Scanner(System.in);
-        int id = s.nextInt();
+
+        int id = 0;
         Node station = null;
+
         while (id != 38 && id != 61) {
             System.out.println("Do you mean St.PaulStreet with id 38 or 61? ");
             id = s.nextInt();
             station = multiGraph.getNode(id);
+            if(station.getId() != 38 || station.getId() != 61 )
+                System.out.println("Enter 38 or 61 for either St.Paul Street");
         }
+
+
         return station;
     }
 }
