@@ -21,13 +21,17 @@ public class MultiGraph implements MultiGraphADT {
     }
 
 
-    public boolean addEdge(Edge e) {
-        edges.add(e);
-        return true;
+    public void addEdge(Edge e) {
+        if(e.getSrcNode() == null || e.getDestNode() == null){
+
+        }
+        else {
+            edges.add(e);
+        }
     }
-    public boolean addNode(Node n) {
+    public void addNode(Node n) {
         nodes.add(n);
-        return true;
+
     }
 
         /*
@@ -91,8 +95,8 @@ public class MultiGraph implements MultiGraphADT {
             return null;
         }
         else {
-            var edgeList = new ArrayList<Edge>();
-            var queue = new LinkedList<Node>();
+            List<Edge> edgeList = new ArrayList<Edge>();
+            Queue<Node> queue = new LinkedList<Node>();
             List<Node> visited = new ArrayList<>();
             queue.add(source);
             visited.add(source);

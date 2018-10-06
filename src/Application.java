@@ -5,9 +5,9 @@ public class Application {
 
 
     public static void main(String[] args) throws BadFileException, IOException {
-        var metro = new BostonMetro();
-        var multiGraph = new MultiGraph();
-        var p = new Parser("src/bostonmetro.txt");
+        BostonMetro metro = new BostonMetro();
+        MultiGraph multiGraph = new MultiGraph();
+        Parser p = new Parser("src/bostonmetro.txt");
         p.createMap(multiGraph);
         Node srcStation = null;
         Node desStation = null;
