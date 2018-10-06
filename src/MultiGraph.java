@@ -41,7 +41,7 @@ public class MultiGraph implements MultiGraphADT {
                     }
                 if (e.getSrcNode().getId() == node1.getId() && e.getDestNode().getId() == node2.getId()
 
-                        || e.getDestNode().getId() == node1.getId() && e.getSrcNode().getId() == node2.getId()) {
+                || e.getDestNode().getId() == node1.getId() && e.getSrcNode().getId() == node2.getId()) {
                     return true;
                 }
             }
@@ -54,9 +54,6 @@ public class MultiGraph implements MultiGraphADT {
         for(Node n : nodes){
             if(isEdge(n,node)){
                 successors.add(n);
-            }
-            else if(isEdge(n,node)){
-                successors.add(node);
             }
         }
         return successors;
@@ -83,5 +80,66 @@ public class MultiGraph implements MultiGraphADT {
     }
     public List<Node> getNodes(){
         return nodes;
+    }
+
+
+
+
+    public List<Edge> findRoute(Node source, Node destination) {
+        if(source.equals(destination)){
+            System.out.println("Error: Source is destination, try again");
+            return null;
+        }
+        else {
+            var edgeList = new ArrayList<Edge>();
+            var queue = new LinkedList<Node>();
+            List<Node> visited = new ArrayList<>();
+            queue.add(source);
+            visited.add(source);
+            while (!queue.isEmpty()) {
+                Node current = queue.remove();
+                if (current.getId() == destination.getId()) {
+                    visited.add(current);
+                    System.out.println("visited nodes" + visited);
+                    for(int i = 0; i< visited.size() -1 ; i++) {
+                        for(int j = 1; j < visited.size(); j ++) {
+                            for (Edge e: edges) {
+                                if(e.getSrcNode().equals(visited.get(i)) && e.getDestNode().equals(visited.get(j))) {
+                                    if(!edgeList.contains(e)) {
+                                        edgeList.add(e);
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                    return edgeList;
+                }
+                else {
+                    if (!successors(current).isEmpty()) {
+                        List<Node> children = successors(current);
+                          for ( int i = 0; i < children.size(); i++) {
+                              if(!visited.contains(children.get(i))) {
+                                  queue.add(children.get(i));
+                              }
+                          }
+
+
+
+                          /*  else {
+                                queue.add(children.get(1));
+                            }*/
+
+                    } else {
+                        System.out.println("No path");
+                    }
+                    if(!visited.contains(current)) {
+                        visited.add(current);
+                    }
+
+                }
+            }
+        }
+        return null;
     }
 }

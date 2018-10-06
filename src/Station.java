@@ -29,7 +29,8 @@ public class Station implements Node{
     }
     @Override
     public boolean equals(Object o){
-        return this.id == ((Station) o).getId()  && this.name.equals(((Station) o).getName());
+        final boolean b = this.id == ((Station) o).getId() && this.name.equals(((Station) o).getName());
+        return b;
     }
 
 
