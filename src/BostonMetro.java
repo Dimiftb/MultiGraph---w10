@@ -27,7 +27,7 @@ public class BostonMetro {
             input = new Scanner(System.in);
             stat1 = input.next();
             if (stat1.toLowerCase().equals("st.paulstreet")) {
-                   srcStation = handleStPaul();
+                srcStation = handleStPaul();
 
             } else {
                 srcStation = multiGraph.getNodeByName(stat1);
@@ -46,7 +46,7 @@ public class BostonMetro {
             stat2 = input.next();
 
             if (stat2.toLowerCase().equals("st.paulstreet")) {
-               desStation = handleStPaul();
+                desStation = handleStPaul();
 
             } else {
                 desStation = multiGraph.getNodeByName(stat2);
@@ -58,9 +58,10 @@ public class BostonMetro {
             }
         }
         System.out.println("Finding your route!!");
+        multiGraph.findRoute(srcStation, desStation);
     }
 
-    private Node handleStPaul(){
+    private Node handleStPaul() {
         Scanner s = new Scanner(System.in);
 
         int id = 0;
@@ -70,7 +71,7 @@ public class BostonMetro {
             System.out.println("Do you mean St.PaulStreet with id 38 or 61? ");
             id = s.nextInt();
             station = multiGraph.getNode(id);
-            if(station == null )
+            if (station == null)
                 System.out.println("Station not found, please enter 38 or 61 for either St.Paul Street");
         }
 
