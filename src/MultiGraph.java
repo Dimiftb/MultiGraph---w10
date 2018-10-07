@@ -161,9 +161,7 @@ public class MultiGraph implements MultiGraphADT {
                 }
             }
         }
-        directions.add("After this final change you will arrive at your desired station. " +
-                "" +
-                "THANKS FOR USING OUR MULTIGRAPH MAP MAP MAP MAPPER MAP");
+        directions.add("After this final change you will arrive at your desired station. ");
         return directions;
     }
 
