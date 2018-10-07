@@ -18,24 +18,24 @@ public class Line implements Edge {
     }
 
     @Override
-    public Node getSrcNode() {
+    public Node getSource() {
         return sourceStation;
     }
 
     @Override
-    public Node getDestNode() {
+    public Node getDestination() {
         return destinationStation;
     }
     @Override
     public final int hashCode() {
-        return this.getSrcNode().getId() >> 16 * this.getDestNode().getId();
+        return this.getSource().getId() >> 16 * this.getDestination().getId();
     }
     @Override
     public boolean equals(Object o){
-        return this.getSrcNode() == ((Line) o).getSrcNode()  && this.getDestNode() ==(((Line) o).getDestNode());
+        return this.getSource() == ((Line) o).getSource()  && this.getDestination() ==(((Line) o).getDestination());
     }
     @Override
     public String toString(){
-        return this.sourceStation + " " + this.getDestNode();
+        return this.sourceStation + " " + this.getDestination();
     }
 }

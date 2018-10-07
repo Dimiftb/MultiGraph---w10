@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class MultiGraph implements MultiGraphADT {
@@ -23,7 +22,7 @@ public class MultiGraph implements MultiGraphADT {
 
 
     public boolean addEdge(Edge e) {
-        if (e.getSrcNode() == null || e.getDestNode() == null) {
+        if (e.getSource() == null || e.getDestination() == null) {
             return false;
         } else {
             edges.add(e);
@@ -43,11 +42,11 @@ public class MultiGraph implements MultiGraphADT {
     public boolean isEdge(Node node1, Node node2) {
 
         for (Edge e : edges) {
-            if (e.getSrcNode() == null || e.getDestNode() == null) {
+            if (e.getSource() == null || e.getDestination() == null) {
                 continue;
             }
-            if (e.getSrcNode() == node1 && e.getDestNode() == node2
-                    || e.getDestNode() == node1 && e.getSrcNode() == node2) {
+            if (e.getSource() == node1 && e.getDestination() == node2
+                    || e.getDestination() == node1 && e.getSource() == node2) {
                 return true;
             }
         }
@@ -101,7 +100,7 @@ public class MultiGraph implements MultiGraphADT {
         return nodes;
     }
 
-    public void findRoute(Node srcNode, Node desNode) {
+    public List<Node> findRoute(Node srcNode, Node desNode) {
         List<Node> visited = new ArrayList<>();
         visited.add(srcNode);
         boolean arrived = false;
@@ -135,14 +134,15 @@ public class MultiGraph implements MultiGraphADT {
         }
         Collections.reverse(route);
         //reverse them because theyre backwards
-        printpath(route);
+        return  route;
     }
 
-    private void printpath(List<Node> path) {
+    public List<String> getPath(List<Node> path) {
         String current = "";
         String newLine = "";
+        List<String> directions = new ArrayList<>();
         int counter = 0;
-        System.out.println("Begin at: " + path.get(0).getName() + " on Line:  " + newLine);
+        directions.add("Begin at: " + path.get(0).getName());
         current = newLine;
         //For every station
         //ITS 2 AM ON SATURDAY AND IM DOING THIS SORRY FOR BAD COMMENTS
@@ -153,12 +153,12 @@ public class MultiGraph implements MultiGraphADT {
                 Node next = path.get(counter);
                 List<Edge> edges = this.edges;
 
-    //ULTIMATELY WE'VE NOT ACTUALLY FOUND AN EFFICIENT ROUTE
+                //ULTIMATELY WE'VE NOT ACTUALLY FOUND AN EFFICIENT ROUTE
                 // WE'RE JUST PRINTING THE MOST EFFICIENT ONE!!!!!
                 for (Edge e : edges) {
                     List<Node> nodes = new ArrayList<>();
-                    nodes.add(e.getDestNode());
-                    nodes.add(e.getSrcNode());
+                    nodes.add(e.getDestination());
+                    nodes.add(e.getSource());
                     boolean node1 = false;
                     boolean node2 = false;
                     for (Node node : nodes) {
@@ -169,21 +169,22 @@ public class MultiGraph implements MultiGraphADT {
                     }
                     if (node1 == true && node2 == true) {
                         newLine = e.getLabel();
+                        System.out.println(e.getLabel());
                     }
                 }
-
-
                 //I ALMOST HAD THIS ABOUT 8 COMMITS AGO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 if (!current.equals(newLine)) {
                     current = newLine;
-                    System.out.println("At: " + station.getName() + " change to " + newLine);
+                    directions.add("At: " + station.getName() + " change to the " + current + " Line");
                 }
             }
         }
-        System.out.println("After this final change you will arrive at your desired station. " +
+        directions.add("After this final change you will arrive at your desired station. " +
                 "" +
                 "THANKS FOR USING OUR MULTIGRAPH MAP MAP MAP MAPPER MAP");
+        return directions;
     }
+
 
 }
 
