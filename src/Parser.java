@@ -65,6 +65,8 @@ public class Parser {
             homeStationID = Integer.parseInt(st.nextToken());
             homeStation = (Station) map.getNode(homeStationID);
             st.nextToken();
+
+
             lineName = st.nextToken();
 
             if (!st.hasMoreTokens()) {
@@ -86,7 +88,7 @@ public class Parser {
                 line = fileInput.readLine();
                 continue;
             }
-            Line inbound = new Line(lineName, outboundStation, homeStation);
+            Line inbound = new Line(lineName, homeStation, outboundStation);
             Line outbound = new Line(lineName, homeStation, inboundStation);
             map.addEdge(outbound);
             map.addEdge(inbound);
@@ -94,6 +96,8 @@ public class Parser {
             line = fileInput.readLine();
         }
     }
+
+
 }
 
 

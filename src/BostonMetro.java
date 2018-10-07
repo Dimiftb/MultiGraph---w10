@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class BostonMetro {
 
-    private MultiGraphADT multiGraph;
+    private MultiGraph multiGraph;
     private Parser p;
 
     public BostonMetro() throws IOException, BadFileException {

@@ -18,6 +18,4 @@ public interface MultiGraphADT {
     Node getNode(int id);
 
     Node getNodeByName(String name);
-
-    void findRoute(Node srcNode, Node desNode);
 }
