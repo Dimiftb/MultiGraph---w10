@@ -11,33 +11,25 @@ public class MultiGraph implements MultiGraphADT {
 
     }
 
-    public int nNodes() {
-        return nodes.size();
-    }
-
-
-    public int nEdges() {
-        return edges.size();
-    }
-
-
-    public boolean addEdge(Edge e) {
+    /*
+       Return type is of boolean for the purposes of testing
+     */
+    public void addEdge(Edge e) {
         if (e.getSource() == null || e.getDestination() == null) {
-            return false;
+
         } else {
             edges.add(e);
-            return true;
-        }
 
+        }
     }
 
-    public boolean addNode(Node n) {
+    public void addNode(Node n) {
         nodes.add(n);
-        return true;
     }
 
     /*
      * @params Nodes to check if an edge exists between them
+     * @returns True or false if there is an edge between the two nodes
      */
     public boolean isEdge(Node node1, Node node2) {
 
@@ -53,8 +45,11 @@ public class MultiGraph implements MultiGraphADT {
 
         return false;
     }
-
-    public List<Node> successors(Node node) {
+    /*
+     * @params Node to get neighbours of
+     * @returns A list of potential neighbours to node in multigraph
+     */
+    public List<Node> getNeighbours(Node node) {
         List<Node> successors = new ArrayList<>();
         for (Node n : nodes) {
             if (isEdge(n, node)) {
@@ -64,16 +59,10 @@ public class MultiGraph implements MultiGraphADT {
         return successors;
 
     }
-
-    public String getLabel(Node n1, Node n2) {
-        for (Edge e : edges) {
-            if (isEdge(n1, n2)) {
-                return e.getLabel();
-            }
-        }
-        return null;
-    }
-
+    /*
+     * @params A name to try and match a node to
+     * @returns A node based on the unique name
+     */
     public Node getNodeByName(String name) {
         for (Node n : nodes) {
             if (n.getName().toLowerCase().replaceAll(" ", "").equals(name.toLowerCase().replaceAll(" ", ""))) {
@@ -82,24 +71,22 @@ public class MultiGraph implements MultiGraphADT {
         }
         return null;
     }
-
-    public Node getNode(int id) {
+    /*
+     * @params An ID to get a node from.
+     * @returns A node with that ID.
+     */
+    public Node getNodeByID(int id) {
         for (Node n : nodes) {
-            if (n.getId() == id) {
+            if (n.getID() == id) {
                 return n;
             }
         }
         return null;
     }
-
-    public List<Edge> getedges() {
-        return this.edges;
-    }
-
-    public List<Node> getNodes() {
-        return nodes;
-    }
-
+    /*
+     * @params Two nodes to find a route between
+     * @returns A list of nodes indicating the shortest path between them
+     */
     public List<Node> findRoute(Node srcNode, Node desNode) {
         List<Node> visited = new ArrayList<>();
         visited.add(srcNode);
@@ -107,7 +94,7 @@ public class MultiGraph implements MultiGraphADT {
         edgeMap = new HashMap<>();
         int i = 0;
         while (!arrived) {
-            List<Node> m = successors(visited.get(i));
+            List<Node> m = getNeighbours(visited.get(i));
             for (Node n : m) {
                 if (!visited.contains(n)) {
                     visited.add(n);
@@ -134,27 +121,25 @@ public class MultiGraph implements MultiGraphADT {
         }
         Collections.reverse(route);
         //reverse them because theyre backwards
-        return  route;
+        return route;
     }
-
-    public List<String> getPath(List<Node> path) {
+    /*
+     * @params A route between two nodes
+     * @returns A list of directions with line changes
+     */
+    public List<String> getPath(List<Node> route) {
         String current = "";
         String newLine = "";
         List<String> directions = new ArrayList<>();
         int counter = 0;
-        directions.add("Begin at: " + path.get(0).getName());
+        directions.add("Begin at: " + route.get(0).getName());
         current = newLine;
-        //For every station
-        //ITS 2 AM ON SATURDAY AND IM DOING THIS SORRY FOR BAD COMMENTS
-        for (Node station : path) {
+        for (Node station : route) {
             counter++;
-            if (counter != path.size()) {
+            if (counter != route.size()) {
 
-                Node next = path.get(counter);
+                Node next = route.get(counter);
                 List<Edge> edges = this.edges;
-
-                //ULTIMATELY WE'VE NOT ACTUALLY FOUND AN EFFICIENT ROUTE
-                // WE'RE JUST PRINTING THE MOST EFFICIENT ONE!!!!!
                 for (Edge e : edges) {
                     List<Node> nodes = new ArrayList<>();
                     nodes.add(e.getDestination());
@@ -169,10 +154,8 @@ public class MultiGraph implements MultiGraphADT {
                     }
                     if (node1 == true && node2 == true) {
                         newLine = e.getLabel();
-                        System.out.println(e.getLabel());
                     }
                 }
-                //I ALMOST HAD THIS ABOUT 8 COMMITS AGO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 if (!current.equals(newLine)) {
                     current = newLine;
                     directions.add("At: " + station.getName() + " change to the " + current + " Line");

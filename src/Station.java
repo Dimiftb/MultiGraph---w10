@@ -4,24 +4,24 @@ public class Station implements Node{
     private String name;
 
     public Station(int stationId, String stationName) {
-
         this.id = stationId;
         this.name = stationName;
     }
 
+    //All self explanatory
+
 
     @Override
-    public int getId() {
+    public int getID() {
         return id;
     }
-
     @Override
     public String getName() {
         return name;
     }
     @Override
     public String toString(){
-        return this.getId() + " " + this.getName();
+        return this.getID() + " " + this.getName();
     }
     @Override
     public final int hashCode() {
@@ -29,8 +29,8 @@ public class Station implements Node{
     }
     @Override
     public boolean equals(Object o){
-        final boolean b = this.id == ((Station) o).getId() && this.name.equals(((Station) o).getName());
-        return b;
+        return this.id == ((Station) o).getID() && this.name.equals(((Station) o).getName());
+
     }
 
 

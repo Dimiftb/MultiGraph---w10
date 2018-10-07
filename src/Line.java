@@ -11,7 +11,9 @@ public class Line implements Edge {
         this.destinationStation = dest;
     }
 
-
+    /*
+     * These are all self explanatory
+     */
     @Override
     public String getLabel() {
         return color;
@@ -26,9 +28,14 @@ public class Line implements Edge {
     public Node getDestination() {
         return destinationStation;
     }
+
+    /*
+     * This was used for if we had hashmaps.
+     * Don't think we used hashmaps.
+     */
     @Override
     public final int hashCode() {
-        return this.getSource().getId() >> 16 * this.getDestination().getId();
+        return this.getSource().getID() >> 16 * this.getDestination().getID();
     }
     @Override
     public boolean equals(Object o){

@@ -1,6 +1,6 @@
 public interface Node {
 
-    int getId();
+    int getID();
     String getName();
 
 }

@@ -63,7 +63,7 @@ public class Parser {
 
 
             homeStationID = Integer.parseInt(st.nextToken());
-            homeStation = (Station) map.getNode(homeStationID);
+            homeStation = (Station) map.getNodeByID(homeStationID);
             st.nextToken();
 
 
@@ -74,7 +74,7 @@ public class Parser {
                 throw new BadFileException("BAD FORMAT");
             }
             outboundID = Integer.parseInt(st.nextToken());
-            outboundStation = (Station) map.getNode(outboundID);
+            outboundStation = (Station) map.getNodeByID(outboundID);
 
             if (!st.hasMoreTokens()) {
                 fileInput.close();
@@ -82,7 +82,7 @@ public class Parser {
             }
 
             inboundID = Integer.parseInt(st.nextToken());
-            inboundStation = (Station) map.getNode(inboundID);
+            inboundStation = (Station) map.getNodeByID(inboundID);
 
             if (inboundID == 0 || outboundID == 0) {
                 line = fileInput.readLine();

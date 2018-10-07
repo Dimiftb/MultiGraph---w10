@@ -1,5 +1,3 @@
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
-
 import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
@@ -14,7 +12,10 @@ public class BostonMetro {
         multiGraph = new MultiGraph();
         p.createMap(multiGraph);
     }
-
+    /*
+     * @params None
+     * @returns Nothing. It just runs our program
+     */
     public void run() {
         Node srcStation = null;
         Node desStation = null;
@@ -22,8 +23,8 @@ public class BostonMetro {
         Scanner input = new Scanner(System.in);
         String stat1;
         String stat2;
-        int id = 5000;
         String command = " ";
+        System.out.println("Type help for help or directions for directions");
         while (!command.equalsIgnoreCase("quit")) {
             System.out.println("What would you like to do...");
             command = input.next();
@@ -43,9 +44,7 @@ public class BostonMetro {
 
                     }
                 }
-
                 while (desStation == null || desStation.equals(srcStation)) {
-                    id = 5000;
                     System.out.println("Enter destination station");
                     input = new Scanner(System.in);
 
@@ -63,16 +62,21 @@ public class BostonMetro {
                         }
                     }
                 }
+
                 System.out.println("Finding your route!!");
-                //Did this so i didnt get more coupling
                 printDirections(multiGraph.getPath(multiGraph.findRoute(srcStation, desStation)));
+
             }
-            else if(command.equalsIgnoreCase("help") || command.equalsIgnoreCase("menu")){
+            else if(command.equalsIgnoreCase("help")){
                 printHelp();
             }
         }
         System.out.println("Cya later alligator...");
     }
+    /*
+     * @params None
+     * @returns Nothing but prints some advice.
+     */
     private void printHelp(){
 
         System.out.println("-------------------------------------------");
@@ -91,6 +95,10 @@ public class BostonMetro {
         }
 
     }
+    /*
+     * @params None
+     * @returns Either of the two St.PaulStreet stations
+     */
     private Node handleStPaul() {
         Scanner s = new Scanner(System.in);
 
@@ -100,12 +108,10 @@ public class BostonMetro {
         while (id != 38 && id != 61) {
             System.out.println("Do you mean St.PaulStreet with id 38 or 61? ");
             id = s.nextInt();
-            station = multiGraph.getNode(id);
+            station = multiGraph.getNodeByID(id);
             if (station == null)
-                System.out.println("Station not found, please enter 38 or 61 for either St.Paul Street");
+                System.out.println("Station not found, please enter 38 or 61 for either of the St.Paul Streets");
         }
-
-
         return station;
     }
 }
