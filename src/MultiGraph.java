@@ -3,7 +3,6 @@ import java.util.*;
 public class MultiGraph implements MultiGraphADT {
     private List<Edge> edges;
     private List<Node> nodes;
-    private Map<Node, Node> edgeMap;
 
     public MultiGraph() {
         edges = new ArrayList<>();
@@ -91,7 +90,7 @@ public class MultiGraph implements MultiGraphADT {
         List<Node> visited = new ArrayList<>();
         visited.add(srcNode);
         boolean arrived = false;
-        edgeMap = new HashMap<>();
+        Map<Node, Node> edgeMap = new HashMap<>();
         int i = 0;
         while (!arrived) {
             List<Node> m = getNeighbours(visited.get(i));

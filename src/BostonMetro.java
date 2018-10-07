@@ -4,11 +4,10 @@ import java.util.Scanner;
 
 public class BostonMetro {
 
-    private MultiGraph multiGraph;
-    private Parser p;
+    private MultiGraphADT multiGraph;
 
     public BostonMetro() throws IOException, BadFileException {
-        p = new Parser("src/bostonmetro.txt");
+        Parser p = new Parser("src/bostonmetro.txt");
         multiGraph = new MultiGraph();
         p.createMap(multiGraph);
     }

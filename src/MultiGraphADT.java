@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.List;
 
 public interface MultiGraphADT {
@@ -14,4 +13,8 @@ public interface MultiGraphADT {
     Node getNodeByID(int id);
 
     Node getNodeByName(String name);
+
+    List<Node> findRoute(Node srcNode, Node desNode);
+
+    List<String> getPath(List<Node> route);
 }
