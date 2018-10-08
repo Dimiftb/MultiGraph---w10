@@ -9,8 +9,6 @@ public class Station implements Node{
     }
 
     //All self explanatory
-
-
     @Override
     public int getID() {
         return id;
@@ -23,10 +21,12 @@ public class Station implements Node{
     public String toString(){
         return this.getID() + " " + this.getName();
     }
+
     @Override
     public final int hashCode() {
         return this.id >> 16;
     }
+
     @Override
     public boolean equals(Object o){
         return this.id == ((Station) o).getID() && this.name.equals(((Station) o).getName());

@@ -38,7 +38,7 @@ public class BostonMetro {
                     } else {
                         srcStation = multiGraph.getNodeByName(stat1);
                         if (srcStation == null) {
-                            System.out.println(stat1 + " is not a station");
+                            System.out.println(stat1 + " is not a station name");
                         }
 
                     }
@@ -55,7 +55,7 @@ public class BostonMetro {
                     } else {
                         desStation = multiGraph.getNodeByName(stat2);
                         if (desStation == null) {
-                            System.out.println(stat2 + " is not a station");
+                            System.out.println(stat2 + " is not a station name");
                         } else if (desStation.equals(srcStation)) {
                             System.out.println(stat2 + " is the same station as current station, enter a different station");
                         }
@@ -100,17 +100,32 @@ public class BostonMetro {
      */
     private Node handleStPaul() {
         Scanner s = new Scanner(System.in);
-
-        int id = 0;
         Node station = null;
 
-        while (id != 38 && id != 61) {
-            System.out.println("Do you mean St.PaulStreet with id 38 or 61? ");
-            id = s.nextInt();
-            station = multiGraph.getNodeByID(id);
-            if (station == null)
-                System.out.println("Station not found, please enter 38 or 61 for either of the St.Paul Streets");
+        while (station == null) {
+            System.out.println("Do you mean St.PaulStreet on the GreenB line or GreenC line " +
+                    "\n enter 1 or 2 for GreenB or GreenC respectively");
+            String id = s.next();
+
+            if (id.matches("[0-9]+"))
+            {
+                if (Integer.parseInt(id) == 1) {
+                    station = multiGraph.getNodeByID(38);
+                } else if (Integer.parseInt(id) == 2) {
+                    station = multiGraph.getNodeByID(61);
+                }
+
+                if (station == null)
+                    System.out.println("Station not found, please enter 1 or 2 for either of the St.Paul Streets Lines");
+            }
+
+            else{
+                System.out.println("Enter 1 or 2 please");
+            }
         }
+
+
         return station;
+
     }
 }
