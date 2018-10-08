@@ -127,7 +127,7 @@ public class MultiGraph implements MultiGraphADT {
         List<String> directions = new ArrayList<>();
         int counter = 0;
         directions.add("Begin at: " + route.get(0).getName());
-        current = newLine;
+
         for (Node station : route) {
             counter++;
             if (counter != route.size()) {
@@ -135,6 +135,7 @@ public class MultiGraph implements MultiGraphADT {
                 Node next = route.get(counter);
                 List<Edge> edges = this.edges;
                 for (Edge e : edges) {
+
                     List<Node> nodes = new ArrayList<>();
                     nodes.add(e.getDestination());
                     nodes.add(e.getSource());
@@ -149,10 +150,11 @@ public class MultiGraph implements MultiGraphADT {
                     if (node1 == true && node2 == true) {
                         newLine = e.getLabel();
                     }
+
                 }
                 if (!current.equals(newLine)) {
                     current = newLine;
-                    directions.add("At: " + station.getName() + " change to the " + current + " Line");
+                    directions.add("At: " + station.getName() + " change to the " + current  + " Line");
                 }
             }
         }

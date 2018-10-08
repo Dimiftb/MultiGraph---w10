@@ -25,6 +25,9 @@ public class BostonMetro {
         String command = " ";
         System.out.println("Type quit to quit, help for help, or directions for directions");
         while (!command.equalsIgnoreCase("quit")) {
+            command = " ";
+            srcStation = null;
+            desStation = null;
             System.out.println("What would you like to do...");
             command = input.next();
             if(command.equalsIgnoreCase("directions")){
