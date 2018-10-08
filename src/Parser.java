@@ -92,7 +92,6 @@ public class Parser {
             Line outbound = new Line(lineName, homeStation, inboundStation);
             map.addEdge(outbound);
             map.addEdge(inbound);
-
             line = fileInput.readLine();
         }
     }

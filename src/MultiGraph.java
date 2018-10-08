@@ -10,16 +10,11 @@ public class MultiGraph implements MultiGraphADT {
 
     }
 
-    /*
-       Return type is of boolean for the purposes of testing
-     */
     public void addEdge(Edge e) {
-        if (e.getSource() == null || e.getDestination() == null) {
-
-        } else {
+        if (!(e.getSource() == null || e.getDestination() == null)) {
             edges.add(e);
-
         }
+
     }
 
     public void addNode(Node n) {
@@ -161,7 +156,7 @@ public class MultiGraph implements MultiGraphADT {
                 }
             }
         }
-        directions.add("After this final change you will arrive at your desired station. ");
+        directions.add("After this final change you stay on this line, and will arrive at your desired station.");
         return directions;
     }
 

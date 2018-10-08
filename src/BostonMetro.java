@@ -23,7 +23,7 @@ public class BostonMetro {
         String stat1;
         String stat2;
         String command = " ";
-        System.out.println("Type help for help or directions for directions");
+        System.out.println("Type quit to quit, help for help, or directions for directions");
         while (!command.equalsIgnoreCase("quit")) {
             System.out.println("What would you like to do...");
             command = input.next();
@@ -70,7 +70,7 @@ public class BostonMetro {
                 printHelp();
             }
         }
-        System.out.println("Cya later alligator...");
+        System.out.println("Thanks for using the direction system.");
     }
     /*
      * @params None
