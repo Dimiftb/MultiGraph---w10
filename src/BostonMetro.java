@@ -1,3 +1,4 @@
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
@@ -6,10 +7,17 @@ public class BostonMetro {
 
     private MultiGraphADT multiGraph;
 
-    public BostonMetro() throws IOException, BadFileException {
-        Parser p = new Parser("src/bostonmetro.txt");
-        multiGraph = new MultiGraph();
-        p.createMap(multiGraph);
+    public BostonMetro() throws BadFileException {
+        Parser p;
+                try {
+                    p = new Parser("src/bostonmetro.txt");
+                    multiGraph = new MultiGraph();
+                    p.createMap(multiGraph);
+                }
+                    catch(IOException e){
+                        System.out.println("Somethingw went wrong. Please check the filename");
+                    }
+
     }
     /*
      * @params None
